@@ -12,4 +12,4 @@ You can install this setup in the `~/.config/nvim/`
 
 ## References
 
-- **Coming soon**
+- [Setup Neovim 0.8 With Me, 1 Hour Typing Sound (ASMR)](https://www.youtube.com/watch?v=uGrxQd5LrRw&list=PLzPQsZqPu9iDRwwnRBqkIoDIV9BxBIT_-&index=5)
