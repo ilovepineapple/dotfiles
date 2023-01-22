@@ -56,6 +56,11 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+local defaults = {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- configure html server
 lspconfig["html"].setup({
   capabilities = capabilities,
@@ -86,7 +91,18 @@ lspconfig["tailwindcss"].setup({
 lspconfig["emmet_ls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "erb" },
+})
+
+-- configure solargraph
+lspconfig["solargraph"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    Solargraph = {
+      root_dir = require("lspconfig").util.root_pattern("Gemfile", ".git")(fname) or vim.fn.getcwd()
+    },
+  },
 })
 
 -- configure lua server (with special settings)
