@@ -56,11 +56,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-local defaults = {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
 -- configure html server
 lspconfig["html"].setup({
   capabilities = capabilities,
@@ -99,8 +94,10 @@ lspconfig["solargraph"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {
-    Solargraph = {
-      root_dir = require("lspconfig").util.root_pattern("Gemfile", ".git")(fname) or vim.fn.getcwd()
+    solargraph = {
+      diagnostics = true,
+      formatting = true,
+      autocompletion = true,
     },
   },
 })
