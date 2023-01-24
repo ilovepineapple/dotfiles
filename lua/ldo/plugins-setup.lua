@@ -33,8 +33,7 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  -- use("jeffkreeftmeijer/vim-dim")
-  use("arcticicestudio/nord-vim")
+  use({ "ellisonleao/gruvbox.nvim" })
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
