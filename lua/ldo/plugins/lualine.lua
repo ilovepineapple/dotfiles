@@ -36,9 +36,9 @@ lualine_nightfly.command = {
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = lualine_nightfly,
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
+    theme = "nord",
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -50,26 +50,26 @@ lualine.setup({
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
-    }
+    },
   },
   sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { { 'filename', path = 1 } },
-    lualine_c = { 'branch', 'diff', 'diagnostics' },
-    lualine_x = { '' },
-    lualine_y = { 'encoding' },
-    lualine_z = { 'fileformat', 'filetype' }
+    lualine_a = { "mode" },
+    lualine_b = { { "filename", path = 1 } },
+    lualine_c = { "branch", "diff", "diagnostics" },
+    lualine_x = { "" },
+    lualine_y = { "encoding" },
+    lualine_z = { "fileformat", "filetype" },
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { 'filename' },
-    lualine_x = { 'location' },
+    lualine_c = { "filename" },
+    lualine_x = { "location" },
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = {},
   },
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = {},
 })
