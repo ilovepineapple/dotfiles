@@ -1,4 +1,4 @@
-vim.g.mapleader= " " --setup space leader key
+vim.g.mapleader = " " --setup space leader key
 
 local keymap = vim.keymap -- for conciseness
 
@@ -50,3 +50,7 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- markdown preview
+keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>mps", ":MarkdownPreviewStop<CR>")
