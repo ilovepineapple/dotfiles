@@ -23,8 +23,8 @@ null_ls.setup({
         return utils.root_has_file(".stylua.toml")
       end,
     }), -- lua formatter
-    formatting.rubocop,
-    diagnostics.rubocop,
+    -- formatting.rubocop,
+    -- diagnostics.rubocop,
     diagnostics.eslint_d.with({ -- js/ts linter
       -- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
       condition = function(utils)
