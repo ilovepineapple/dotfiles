@@ -116,6 +116,8 @@ return packer.startup(function(use)
 
   use({ "codota/tabnine-nvim", run = "./dl_binaries.sh" })
 
+  use("mfussenegger/nvim-dap")
+
   if packer_bootstrap then
     require("packer").sync()
   end
