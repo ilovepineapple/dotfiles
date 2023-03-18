@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-tree.lua")
 
   -- vs-code like icons
-  use("nvim-tree/nvim-web-devicons")
+  -- use("nvim-tree/nvim-web-devicons")
 
   -- statusline
   use("nvim-lualine/lualine.nvim")
