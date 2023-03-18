@@ -13,10 +13,18 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 nvimtree.setup({
   renderer = {
     icons = {
+      show = {
+        file = false,
+        folder = false,
+        folder_arrow = true,
+        git = true,
+        modified = true,
+      },
       glyphs = {
+        bookmark = "📚",
         folder = {
-          arrow_closed = "", -- arrow when folder is closed
-          arrow_open = "", -- arrow when folder is open
+          arrow_closed = "→", -- arrow when folder is closed
+          arrow_open = "↓", -- arrow when folder is open
         },
       },
     },
