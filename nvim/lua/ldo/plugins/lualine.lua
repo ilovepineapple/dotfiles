@@ -36,7 +36,7 @@ end
 lualine.setup({
   options = {
     icons_enabled = false,
-    theme = "Dracula",
+    theme = "Gruvbox",
     -- component_separators = "|",
     component_separators = "-",
     section_separators = "",
