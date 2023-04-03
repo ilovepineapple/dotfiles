@@ -5,7 +5,7 @@ if not setup then
 end
 
 -- for conciseness
-local formatting = null_ls.builtins.formatting -- to setup formatters
+local formatting = null_ls.builtins.formatting   -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 -- to setup format on save
@@ -42,7 +42,7 @@ null_ls.setup({
         buffer = bufnr,
         callback = function()
           -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-          vim.lsp.buf.formatting_sync()
+          vim.lsp.buf.format({ async = true })
         end,
       })
     end
