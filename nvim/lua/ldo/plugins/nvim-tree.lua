@@ -14,8 +14,8 @@ nvimtree.setup({
   renderer = {
     icons = {
       show = {
-        file = false,
-        folder = false,
+        file = true,
+        folder = true,
         folder_arrow = true,
         git = true,
         modified = true,
@@ -23,10 +23,10 @@ nvimtree.setup({
       glyphs = {
         bookmark = "📚",
         folder = {
-          -- arrow_closed = "→", -- arrow when folder is closed
-          arrow_closed = "+", -- arrow when folder is closed
-          -- arrow_open = "↓", -- arrow when folder is open
-          arrow_open = "-", -- arrow when folder is open
+          arrow_closed = "→", -- arrow when folder is closed
+          -- arrow_closed = "+", -- arrow when folder is closed
+          arrow_open = "↓", -- arrow when folder is open
+          -- arrow_open = "-", -- arrow when folder is open
         },
       },
     },
