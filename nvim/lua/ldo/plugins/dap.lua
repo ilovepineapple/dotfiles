@@ -10,25 +10,16 @@ dap.adapters.firefox = {
   args = { os.getenv("HOME") .. "/.local/share/vscode/vscode-firefox-debug/dist/adapter.bundle.js" },
 }
 
-dap.adapters.chrome = {
-  type = "executable",
-  command = "node",
-  args = { os.getenv("HOME") .. "/.local/share/vscode/vscode-chrome-debug/out/src/chromeDebug.js" },
-}
-
-dap.configurations.javascript = {
+dap.configurations.typescript = {
   {
-    name = "Debug with Chrome",
-    type = "chrome",
-    request = "attach",
-    -- program = "${file}",
-    -- cwd = vim.fn.getcwd(),
-    trace = true,
-    sourceMaps = true,
-    -- protocol = "inspector",
-    port = 9222,
-    -- url = "http://localhost:8080",
+    name = "Debug with Firefox",
+    type = "firefox",
+    request = "launch",
+    reAttach = true,
+    url = "http://localhost:3000",
     webRoot = "${workspaceFolder}",
+    firefoxExecutable = "/usr/bin/firefox",
+    firefoxExecutablePath = "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox-bin",
   },
 }
 

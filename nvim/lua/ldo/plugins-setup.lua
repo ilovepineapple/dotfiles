@@ -120,6 +120,8 @@ return packer.startup(function(use)
   -- Debugger tool
   use("mfussenegger/nvim-dap")
 
+  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
   if packer_bootstrap then
     require("packer").sync()
   end
