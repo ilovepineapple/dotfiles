@@ -5,7 +5,7 @@ if not setup then
 end
 
 -- for conciseness
-local formatting = null_ls.builtins.formatting   -- to setup formatters
+local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 -- to setup format on save
@@ -34,17 +34,17 @@ null_ls.setup({
     }),
   },
   -- configure format on save
-  on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = augroup,
-        buffer = bufnr,
-        callback = function()
-          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-          vim.lsp.buf.format({ async = true })
-        end,
-      })
-    end
-  end,
+  -- on_attach = function(client, bufnr)
+  --   if client.supports_method("textDocument/formatting") then
+  --     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+  --     vim.api.nvim_create_autocmd("BufWritePre", {
+  --       group = augroup,
+  --       buffer = bufnr,
+  --       callback = function()
+  --         -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+  --         vim.lsp.buf.format({ async = true })
+  --       end,
+  --     })
+  --   end
+  -- end,
 })
